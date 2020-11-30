@@ -1,5 +1,5 @@
 {% set name = "cmasher" %}
-{% set version = "1.5.6" %}
+{% set version = "1.5.7" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1befc9f1d380748604b154a5aa9dd2c5bc1e0da9e01f2803c1e08349e117cd6c
+  sha256: b2dbf476768958775147de9a625e60d639116331601b8c32ba7127f60773ed53
 
 build:
   number: 0

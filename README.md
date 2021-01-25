@@ -5,11 +5,9 @@ Home: https://cmasher.readthedocs.io
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cmasher-feedstock/blob/master/LICENSE.txt)
 
 Summary: Scientific colormaps for making accessible, informative and 'cmashing' plots
-
-
 
 Current build status
 ====================

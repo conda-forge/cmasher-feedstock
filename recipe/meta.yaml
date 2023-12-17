@@ -1,5 +1,5 @@
 {% set name = "cmasher" %}
-{% set version = "1.6.3" %}
+{% set version = "1.7.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 242e206e58ad6115ff0a5a5405a1ddae80efd1cb03a06dc23db44e710e7c9f23
+  sha256: c013b7c8e8d51fa253904971db323fc6dee1ed7baa32194272eede30d005e152
 
 build:
   number: 0
@@ -20,13 +20,12 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5,<4.0
+    - python >=3.9,<4.0
   run:
     - colorspacious >=1.1.0
-    - e13tools >=0.9.4
-    - matplotlib-base >=2.2.4
-    - numpy >=1.16.0
-    - python >=3.5,<4.0
+    - matplotlib-base >=3.5.0
+    - numpy >=1.19.3
+    - python >=3.9,<4.0
 
 test:
   imports:

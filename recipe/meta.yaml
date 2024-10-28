@@ -1,5 +1,5 @@
 {% set name = "cmasher" %}
-{% set version = "1.8.0" %}
+{% set version = "1.9.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b33f2dca9002ca3c87275e3081a7cb6287af963a3e76c862d34e5488b63789d0
+  sha256: 7be1c88c04fbe6722b5895677836fe3bd95e290eac37eba3cfdbd758679db431
 
 build:
   number: 0
@@ -19,18 +19,18 @@ build:
 
 requirements:
   host:
+    - python >=3.10
+    - hatchling
     - pip
-    - python >=3.9,<4.0
   run:
+    - python >=3.10
     - colorspacious >=1.1.0
     - matplotlib-base >=3.5.0
-    - numpy >=1.19.3
-    - python >=3.9,<4.0
+    - numpy >=1.21.2
 
 test:
   imports:
     - cmasher
-    - cmasher.tests
   commands:
     - pip check
     - cmr --help

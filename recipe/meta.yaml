@@ -1,5 +1,5 @@
 {% set name = "cmasher" %}
-{% set version = "1.9.0" %}
+{% set version = "1.9.2" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7be1c88c04fbe6722b5895677836fe3bd95e290eac37eba3cfdbd758679db431
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 6c90c2cec87146e3210d3e7f2321fceee38ac7d87c136cd0de25160a14f57ff5
 
 build:
   number: 0
@@ -29,13 +29,19 @@ requirements:
     - numpy >=1.21.2
 
 test:
+  source_files:
+    - tests
+    - conftest.py
   imports:
     - cmasher
   commands:
     - pip check
     - cmr --help
+    - pytest -ra tests
   requires:
     - pip
+    - pytest
+    - pytest-mpl
 
 about:
   home: https://cmasher.readthedocs.io

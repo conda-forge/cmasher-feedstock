@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "cmasher" %}
 {% set version = "1.9.2" %}
 
@@ -11,7 +12,7 @@ source:
   sha256: 6c90c2cec87146e3210d3e7f2321fceee38ac7d87c136cd0de25160a14f57ff5
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - cmr = cmasher.cli_tools:main
@@ -19,11 +20,11 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - hatchling
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - colorspacious >=1.1.0
     - matplotlib-base >=3.5.0
     - numpy >=1.21.2
@@ -42,6 +43,7 @@ test:
     - pip
     - pytest
     - pytest-mpl
+    - python {{ python_min }}
 
 about:
   home: https://cmasher.readthedocs.io

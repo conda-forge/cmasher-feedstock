@@ -3,7 +3,7 @@ schema_version: 1
 context:
   python_min: "3.10"
   name: cmasher
-  version: "1.9.2"
+  version: "1.9.4"
 
 package:
   name: ${{ name|lower }}
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 6c90c2cec87146e3210d3e7f2321fceee38ac7d87c136cd0de25160a14f57ff5
+  sha256: e372f716205c83b5eb4d167e553a8f24527a8473c33df01b2f3aa20819eae22c
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
   python:

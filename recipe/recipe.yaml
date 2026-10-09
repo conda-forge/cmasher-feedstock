@@ -1,7 +1,6 @@
 schema_version: 1
 
 context:
-  python_min: "3.10"
   name: cmasher
   version: "1.9.3"
 
@@ -24,7 +23,7 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - hatchling
+    - flit-core >=3.11,<5
     - pip
   run:
     - python >=${{ python_min }}

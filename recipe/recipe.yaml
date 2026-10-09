@@ -1,7 +1,6 @@
 schema_version: 1
 
 context:
-  python_min: "3.10"
   name: cmasher
   version: "1.9.4"
 
@@ -24,13 +23,14 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - hatchling
+    - flit-core >=3.11.0,<5
     - pip
   run:
     - python >=${{ python_min }}
-    - colorspacious >=1.1.0
-    - matplotlib-base >=3.5.0
-    - numpy >=1.21.2
+    - colorspacious >=1.1.2
+    - matplotlib-base >=3.6.0
+    - numpy >=1.23.2
+    - typing-extensions >=4.4.0
 
 tests:
   - python:
